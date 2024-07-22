@@ -21,11 +21,14 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "precommit": "npm run prettier && npm run lint && npm test",
+    "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
+    "lint": "cross-env eslint \"src/**/*.{js,jsx,ts,tsx}\""
   },
   "eslintConfig": {
     "extends": [
@@ -60,9 +63,12 @@
     "@storybook/test": "^8.1.10",
     "@testing-library/react": "^16.0.0",
     "@types/storybook__react": "^5.2.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
     "eslint-plugin-storybook": "^0.8.0",
     "husky": "^8.0.0",
     "jest-styled-components": "^7.2.0",
+    "prettier": "^3.3.3",
     "prop-types": "^15.8.1",
     "webpack": "^5.92.1"
   }

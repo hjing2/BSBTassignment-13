@@ -1,4 +1,4 @@
 export interface DropdownProps {
-    options: string[];
-    disabled?: boolean;
+  options: string[];
+  disabled?: boolean;
 }

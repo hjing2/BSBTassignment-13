@@ -1,5 +1,5 @@
 export interface CardProps {
-    title: string;
-    content: string;
-    disabled?: boolean;
+  title: string;
+  content: string;
+  disabled?: boolean;
 }

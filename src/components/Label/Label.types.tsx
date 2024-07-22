@@ -1,4 +1,4 @@
 export interface LabelProps {
-    text: string;
-    disabled?: boolean;
+  text: string;
+  disabled?: boolean;
 }

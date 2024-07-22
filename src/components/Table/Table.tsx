@@ -7,11 +7,11 @@ export interface TableProps {
   disabled?: boolean;
 }
 
-const StyledTable = styled.table<Pick<TableProps, 'disabled'>>`
+const StyledTable = styled.table<{ disabled: boolean }>`
   width: 100%;
   border-collapse: collapse;
-  opacity: ${props => props.disabled ? 0.5 : 1};
-  cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
+  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
 `;
 
 const StyledHeader = styled.th`

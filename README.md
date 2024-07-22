@@ -84,28 +84,18 @@ To run tests for the components, use the following command:
 npm test
 ```
 
-## Storybook
-
-To view the components in a visual interface, run the following command:
-
-```bash
-npm run storybook
-```
-
-The application will be available at `http://localhost:6006`.
-
 ## Docker
 
 To build a Docker image for the application, use the following command:
 
 ```bash
-docker build -t haodan_jing_coding_assignment12 .
+docker build -t haodan_jing_coding_assignment13 .
 ```
 
 Run the Docker image using the following command:
 
 ```bash
-docker run -p 8083:6006 -d --name haodan_jing_coding_assignment12 haodan_jing_coding_assignment12
+docker run -p 8018:8018 -d --name haodan_jing_coding_assignment13
 ```
 
-The application will be available at `http://localhost:8083`.
+The application will be available at `http://localhost:8018`.

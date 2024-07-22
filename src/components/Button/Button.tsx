@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-type ButtonProps = {
-  text: string;
-  disabled?: boolean;
-};
+import { ButtonProps } from './Button.types';
 
 const StyledButton = styled.button<{ disabled: boolean }>`
   background-color: ${({ disabled }) => (disabled ? 'grey' : 'blue')};

@@ -7,13 +7,16 @@ export interface LabelProps {
 }
 
 const StyledLabel = styled.label<LabelProps>`
-  color: ${props => props.disabled ? 'grey' : 'black'};
-  cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
+  color: ${(props) => (props.disabled ? 'grey' : 'black')};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 `;
 
 const Label: React.FC<LabelProps> = ({ text, disabled = false }) => (
-  <StyledLabel disabled={disabled} text={text}> {/* Pass the text prop */}
-    {text}  {/* You can remove this line if you don't need to render the text twice */}
+  <StyledLabel disabled={disabled} text={text}>
+    {' '}
+    {/* Pass the text prop */}
+    {text}{' '}
+    {/* You can remove this line if you don't need to render the text twice */}
   </StyledLabel>
 );
 
